@@ -43,7 +43,7 @@ const IndexPage: React.FC = () => {
     });
     pointsClient.distribute(eventName, {
       address,
-      points,
+      points: Number(points),
     })
       .then(() => {
         toast.success('Points distributed successfully');
